@@ -1,8 +1,9 @@
-// alert("WELCOME TO MY WEBSITE");
-// alert("Error! Please enter a valid Password");
-// alert("Welcome to JS Land...\nHappy Coding!");
-// alert("Welcome to JS Land...");
-// alert("Happy Coding!");
+alert("WELCOME TO MY WEBSITE");
+alert("Error! Please enter a valid Password");
+alert("Welcome to JS Land...\nHappy Coding!");
+alert("Welcome to JS Land...");
+alert("Happy Coding!");
+alert("hello I can run through my web browser consol");
 // for (let i = 0; i < 10; i++) {
 //     alert("Happy coding!"+ (i+1));
     
