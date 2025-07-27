@@ -46,6 +46,7 @@
 
     
 }
+}
 @media (max-width:767px){
 
     /* custom css */
@@ -76,9 +77,20 @@ h2{
 
 
     /* newsletter */
+    .newsletter{
+        width: 75%;
+    }
+    .newsletter .main-btn{
+        width: 100%;
+        margin-top: 1rem; 
+    }
 
 
     /* footer link */
+    .footer .footer-link,
+    .footer a i{
+        padding: 0 0.7rem;
+    }
 
 }
 @media (max-width: 330px){
@@ -88,6 +100,7 @@ h2{
         padding: 13rem 3.125rem;
     }
 }
+
 
 
 @media (max-width: 1200px) {

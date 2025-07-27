@@ -337,3 +337,65 @@ p{
 .testimonial-section .carousel-indicators button.active{
     opacity: 1;
 }
+
+/* ========================FAQs Section Design===================== */
+.faq h4 span{
+    color: var(--primary-color);
+    font-size: 1.875rem;
+    margin-right: 0.3125rem;
+}
+.book-food{
+    width: 100%;
+    background: url('./assets/bg-3.jpg') no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 0 71.9125px;
+    padding: 4.375rem 0;
+}
+
+/*===========================Newsletter Section Design===================== */
+.news-letter{
+    width: 55%;
+    margin: 0 auto;
+}
+.news-letter .form-control{
+    height: 3.225rem;
+    padding: 0 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    border: 0.1875rem solid var(--text-gray);
+    color: var(--black-color);
+
+}
+.news-letter .form-control:hover,
+.news-letter .form-control:focus{
+    outline: none;
+    box-shadow: none;
+    border-color: var(--primary-color);
+}
+
+/*=====================Footer Section Design===================== */
+.footer{
+    background-color: var(--primary-color);
+}
+.footer .footer-link{
+    font-size: 1rem;
+    color: var(--white-color);
+    padding: 1.875rem;
+
+}
+.footer .footer-link:hover{
+    color: var(--secondry-color) !important;
+}
+.footer a i{
+    font-size: 1.5rem;
+    color: var(--white-color);
+    padding: 0 1rem;
+}
+.text-allign{
+    color: var(--white-color);
+}
