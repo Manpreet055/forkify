@@ -79,6 +79,7 @@ h2{
     /* newsletter */
     .newsletter{
         width: 75%;
+        margin: 0 auto;
     }
     .newsletter .main-btn{
         width: 100%;
@@ -93,12 +94,40 @@ h2{
     }
 
 }
+
 @media (max-width: 330px){
 
     /* carousel Design */
     .testimonial-section .carousel-item{
         padding: 13rem 3.125rem;
     }
+    .text-content {
+        text-align: left;
+        padding: 0 1rem;
+      }
+    
+      .text-content h2 {
+        font-size: 1.1rem;
+        line-height: 1.4;
+      }
+    
+      .text-content p {
+        font-size: 0.9rem;
+      }
+    
+      .news-letter {
+        width: 100% !important;
+        padding: 0 1rem;
+      }
+    
+      .news-letter .form-control {
+        font-size: 0.85rem;
+      }
+    
+      .main-btn {
+        width: 100%;
+        font-size: 0.9rem;
+      }
 }
 
 
