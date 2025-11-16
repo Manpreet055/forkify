@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 43 to 48</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h3><a onclick="alert('Hi my name is Abdul Sami. This is my Assignment 43 to 48')">Info</a></h3>
+    <h2>Mobile Phone Lookup</h2>
+    <div id="images">
+        <div class="image">
+            <img src="./Assets/apple-iphone-6s-plus.png" class="MobileImages"  onclick="showAlert('Apple Iphone 6S Plus')" alt="">
+            <p>Iphone 6S Plus</p>
+        </div>
+        <div class="image">
+            <img src="./Assets/Huawei-P8.png" class="MobileImages"  onclick="showAlert('Huawei P8')" alt="">
+            <p>Huawei P8</p>
+        </div>
+        <div class="image">
+            <img src="./Assets/LG-V10.png" class="MobileImages"  onclick="showAlert('LG V10')" alt="">
+            <p>LG V10</p>
+        </div>
+        <div class="image">
+            <img src="./Assets/samsung-galaxy-s6-edge.png" class="MobileImages"  onclick="showAlert('Samsung Galaxy S6 Edge')" alt="">
+            <p>Samsumg S6</p>
+        </div>
+    </div>
+
+    <h2>Students Record</h2>
+    <table id="student-Table"  cellspacing="0" cellpadding="8" style="border-collapse: collapse; width: 100%;">
+        <thead>
+            <tr>
+                <th>Index</th>
+                <th>Name</th>
+                <th>Class</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <img src="./Assets/Car1.webp" class="car1" alt="">
+    <hr>
+
+    <div class="main-container">
+        <div>
+            <h2>Counter</h2>
+            <h2 id="number" style="color: red; text-align: center;">0</h2>
+        </div>
+        <div>
+            <button onclick="decrease()">Decrease</button>
+            <button onclick="reset()">Reset</button>
+            <button onclick="increase()">Increase</button>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>

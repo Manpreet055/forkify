@@ -1,0 +1,41 @@
+body{
+    padding: 0 100px;
+}
+* {
+    box-sizing: border-box;
+}
+#pappa {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(14, 50px);
+    gap: 15px;
+    padding: 20px;
+    overflow: hidden;
+}
+  
+.bachay {
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    object-fit: contain;
+}
+  
+.bachay:hover {
+    transform: scale(1.04);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+  
+/* Your existing positions (desktop) */
+#bacha1 { grid-column: 1 / 5; grid-row: 4 / 7; background-image: url("./Assets/Culture3.jpg"); }
+#bacha2 { grid-column: 5 / 8; grid-row: 2 / 5; background-image: url("./Assets/Culture2.jpg"); }
+#bacha3 { grid-column: 8 / 12; grid-row: 1 / 5; background-image: url("./Assets/Culture1.jpg"); }
+#bacha4 { grid-column: 1 / 5; grid-row: 7 / 10; background-image: url("./Assets/Culture6.jpg"); }
+#bacha5 { grid-column: 5 / 10; grid-row: 5 / 10; background-image: url("./Assets/Culture5.jpg"); }
+#bacha6 { grid-column: 10 / 14; grid-row: 5 / 7; background-image: url("./Assets/Culture4.jpg"); }
+#bacha7 { grid-column: 3 / 7; grid-row: 10 / 14; background-image: url("./Assets/Culture8.jpg"); }
+#bacha8 { grid-column: 7 / 10; grid-row: 10 / 14; background-image: url("./Assets/Culture9.jpg"); }
+#bacha9 { grid-column: 10 / 14; grid-row: 7 / 12; background-image: url("./Assets/Culture7.jpg"); }

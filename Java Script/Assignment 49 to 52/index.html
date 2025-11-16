@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Sign Up</h2>
+
+    <form id="signupForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+
+        <button class="submitButton" type="submit">Submit</button>
+    </form>
+
+    <h3>Submitted Data:</h3>
+    <div id="displayData">
+
+    </div>
+    <h1>Importance of Value-based Education</h1>
+    <div class="content">
+        <p>
+            Value-based education is essential in schools as it fosters holistic development in students. It goes beyond the academic curriculum by integrating moral values and ethics into the learning process. This approach helps students develop a strong character, which is crucial in today's complex world.</p><br>  
+            
+        <p>
+            Firstly, value-based education promotes critical thinking and decision-making skills. When students are taught to evaluate situations based on values such as honesty, respect, and empathy, they become better equipped to make informed choices. This is particularly important in an era where they are constantly bombarded with information and influences from various sources.</p><br>
+            
+        <p>
+            Secondly, it enhances social cohesion. By instilling values such as tolerance and understanding, schools can create a more inclusive environment. This not only benefits individual students but also contributes to a more harmonious society. Students learn to appreciate diversity and work collaboratively, which are essential skills in a globalized world.</p><br>
+            
+        <p>
+            Moreover, value-based education prepares students for real-life challenges. It encourages them to act responsibly and ethically in their personal and professional lives. This is increasingly important as employers seek individuals who not only possess technical skills but also demonstrate integrity and social responsibility.</p><br>
+            
+        <p>
+            In conclusion, incorporating value-based education in schools is vital for nurturing well-rounded individuals who can contribute positively to society. It lays the foundation for a future generation that values ethics and moral responsibility, ultimately leading to a better world.</p><br>
+        </div>
+        <a class="more">View more...</a>
+        <a class="less">View less...</a>
+
+    <h2>Students Record</h2>
+
+   <div class="parentdivforform">
+        <form id="studentsForm">
+            <label for="name">Name:</label>
+            <input type="text" id="studentName" placeholder="Enter your name" required>
+    
+            <label for="father name">Father Name:</label>
+            <input type="text" id="fatherName" placeholder="Enter your Father name" required>
+            
+            <label for="class">Class:</label>
+            <input type="text" id="className" placeholder="Enter your class" required>
+    
+            <button class="submitButton" type="submit">Submit</button>
+        </form>
+
+        <form id="editForm" style="display:none;">
+        
+            <label>Edit Name:</label>
+            <input type="text" id="editName">
+        
+            <label>Edit Father Name:</label>
+            <input type="text" id="editFather">
+        
+            <label>Edit Class:</label>
+            <input type="text" id="editClass">
+        
+            <button type="button" class="submitButton" onclick="saveEdit()">Save Changes</button>
+        </form>
+   </div>
+
+    <table id="student-Table"  cellspacing="0" cellpadding="8" style="border-collapse: collapse; width: 100%;">
+        <thead>
+
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    
+
+    <script src="app.js"></script>
+</body>
+</html>
