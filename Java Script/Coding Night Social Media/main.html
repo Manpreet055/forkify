@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Social Media App</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Main Social Feed Page -->
+        <main class="feed" id="app-section">
+            <header class="app-header">
+                <div class="brand">
+                    <h1>Mini Social<span>App</span></h1>
+                    <p id="welcome-text">Welcome, User</p>
+                </div>
+                <div class="header-actions">
+                    <button id="theme-toggle" class="icon-btn" title="Toggle theme">🌓</button>
+                    <button id="logout-btn" class="btn outline">Logout</button>
+                </div>
+            </header>
+
+            <section class="controls">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Search posts...">
+                </div>
+                <div class="sort-controls" id="sort-controls">
+                    <button type="button" data-sort="latest" class="chip active">Latest</button>
+                    <button type="button" data-sort="oldest" class="chip">Oldest</button>
+                    <button type="button" data-sort="liked" class="chip">Most liked</button>
+                </div>
+            </section>
+
+            <section class="create-post">
+                <h2>Create a post</h2>
+                <form id="post-form">
+                    <textarea id="post-text" rows="3" placeholder="What's on your mind?" required></textarea>
+                    <div class="emoji-row">
+                        <div id="emoji-picker" class="emoji-picker" aria-label="Quick emojis">
+                            <button type="button" class="emoji-btn">😀</button>
+                            <button type="button" class="emoji-btn">😂</button>
+                            <button type="button" class="emoji-btn">😍</button>
+                            <button type="button" class="emoji-btn">🔥</button>
+                            <button type="button" class="emoji-btn">😢</button>
+                            <button type="button" class="emoji-btn">👍</button>
+                        </div>
+                        <span class="emoji-hint">Tap an emoji or use your keyboard.</span>
+                    </div>
+                    <input type="url" id="post-image-url" placeholder="Optional image URL">
+                    <div class="create-footer">
+                        <div></div>
+                        <button type="submit" class="btn primary">Post</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="posts" id="posts-section">
+                <h2 class="section-title">Feed</h2>
+                <div id="posts-container" class="posts-list"></div>
+                <p id="empty-state" class="empty-state">No posts yet. Be the first to share something!</p>
+            </section>
+        </main>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
