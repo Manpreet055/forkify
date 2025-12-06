@@ -19,7 +19,7 @@
 
 body.dark-mode{
     /* Dark gradient background when theme is toggled */
-    --bg: radial-gradient(circle at top, #020617, #020617 55%);
+    --bg: radial-gradient(circle at top, #293629, #1b271b 55%);
     --bg-alt: #020617;
     --text: #e5e7eb;
     --muted: #9ca3af;
@@ -144,7 +144,7 @@ textarea:focus{
 }
 
 .btn.outline{
-    background: transparent;
+    background: var(--bg-alt);
     border: 1px solid var(--border);
     color: var(--text);
 }
@@ -220,6 +220,7 @@ textarea:focus{
 }
 
 .chip{
+    color: var(--text);
     border-radius: 999px;
     border: 1px solid var(--border);
     background: var(--bg-alt);
@@ -388,6 +389,7 @@ body.dark-mode .emoji-picker{
 
 .like-btn span.heart{
     font-size: 1.1rem;
+    color: var(--text);
 }
 
 .like-btn.liked span.heart{
@@ -396,10 +398,12 @@ body.dark-mode .emoji-picker{
 
 .like-count{
     font-size: 0.85rem;
+    color: var(--muted)
 }
 
 .delete-btn,
 .edit-btn{
+    color: var(--danger);
     border-radius: 999px;
     border: 1px solid var(--border);
     background: transparent;
