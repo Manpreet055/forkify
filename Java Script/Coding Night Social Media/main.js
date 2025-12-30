@@ -94,18 +94,18 @@ function sortPosts(list, sortKey) {
     case 'oldest':
       copy.sort((a, b) => a.createdAt - b.createdAt);
       break;
-      case 'liked':
-        copy.sort((a, b) => {
-          const likesA = getLikeCount(a);
-          const likesB = getLikeCount(b);
-      
-          if (likesB === likesA) {
-            return b.createdAt - a.createdAt; // latest first if equal likes
-          }
-          return likesB - likesA;
-        });
-        break;
-      
+    case 'liked':
+      copy.sort((a, b) => {
+        const likesA = getLikeCount(a);
+        const likesB = getLikeCount(b);
+
+        if (likesB === likesA) {
+          return b.createdAt - a.createdAt; // latest first if equal likes
+        }
+        return likesB - likesA;
+      });
+      break;
+
     case 'latest':
     default:
       copy.sort((a, b) => b.createdAt - a.createdAt);
@@ -300,8 +300,15 @@ function enterEditMode(articleEl, post) {
   const textarea = document.createElement('textarea');
   textarea.rows = 3;
   textarea.value = post.text;
+  textarea.placeholder = "Edit your post...";
+
+  const imageInput = document.createElement('input');
+  imageInput.type = 'url';
+  imageInput.value = post.imageUrl || '';
+  imageInput.placeholder = "Image URL (optional)";
 
   form.appendChild(textarea);
+  form.appendChild(imageInput);
 
   const actions = document.createElement('div');
   actions.className = 'edit-form-actions';
@@ -330,8 +337,17 @@ function enterEditMode(articleEl, post) {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
     const newText = textarea.value.trim();
-    if (!newText) return;
+    const newImage = imageInput.value.trim();
+
+    if (!newText) {
+      textarea.style.borderColor = 'var(--danger)';
+      setTimeout(() => textarea.style.borderColor = '', 1500);
+      return;
+    }
+
     post.text = newText;
+    post.imageUrl = newImage;
+
     saveToStorage(STORAGE_KEYS.posts, posts);
     renderPosts();
   });
@@ -372,7 +388,12 @@ if (postForm) {
     const imageUrl = postImageInput.value.trim();
 
     if (!text) {
-      alert("Post can't be empty");
+      // Simple shake animation or border color change for feedback
+      postTextInput.style.borderColor = 'var(--danger)';
+      setTimeout(() => {
+        postTextInput.style.borderColor = '';
+      }, 1500);
+      postTextInput.focus();
       return;
     }
 
@@ -422,7 +443,7 @@ if (postsContainer) {
       // Guard edit/delete so only the author can perform them
       const isOwner = currentUser && post.authorEmail && currentUser.email === post.authorEmail;
       if (!isOwner) {
-        alert('You can only edit or delete your own posts.');
+        console.warn('Unauthorized action');
         return;
       }
 
