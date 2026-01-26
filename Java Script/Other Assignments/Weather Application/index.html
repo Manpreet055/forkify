@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Main Container -->
+    <div class="app-container">
+        
+        <!-- App Title -->
+        <header class="app-header">
+            <h1>Weather Forecast</h1>
+        </header>
+
+        <!-- Search Section -->
+        <div class="search-section">
+            <div class="search-bar">
+                <input type="text" placeholder="Enter city name..." class="search-input">
+                <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </div>
+
+        <!-- Weather Card -->
+        <main class="weather-card">
+            
+            <!-- Main Weather Display -->
+            <div class="weather-main">
+                <div class="weather-icon">
+                    <i id="icon" class=""></i>
+                </div>
+                <h2 class="city-name">New York, US</h2>
+                <div class="temperature">27°</div>
+                <div class="weather-condition">Partly Cloudy</div>
+            </div>
+
+            <!-- Additional Info Section -->
+            <div class="weather-details">
+                <div class="detail-item">
+                    <i class="fa-solid fa-droplet "></i>
+                    <div class="detail-text">
+                        <span class="detail-label">Humidity</span>
+                        <span class="detail-value" id="humidity-percentage">45%</span>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <i class="fa-solid fa-wind"></i>
+                    <div class="detail-text">
+                        <span class="detail-label">Wind Speed</span>
+                        <span class="detail-value" id="wind-speed">12 km/h</span>
+                    </div>
+                </div>
+                <div class="detail-item">
+                    <i class="fa-solid fa-temperature-half"></i>
+                    <div class="detail-text">
+                        <span class="detail-label">Feels Like</span>
+                        <span class="detail-value" id="feels-like-temp">74°</span>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>© 2026 Weather Forcast App. All rights reserved.</p>
+        </footer>
+
+    </div>
+
+    <!-- JavaScript Link -->
+    <script src="script.js"></script>
+</body>
+</html>
