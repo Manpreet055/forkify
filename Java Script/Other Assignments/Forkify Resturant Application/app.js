@@ -3,9 +3,11 @@ let searchBtn = document.querySelector(".search-btn")
 let recipeList = document.querySelector(".recipe-list")
 let recipeDetailPanel = document.querySelector(".recipe-detail-panel")
 let recipeDetailContent = document.querySelector(".recipe-detail-content")
+let emoji = document.getElementById("emoji")
+let instruction = document.getElementById("instruction")
 
 const foodItemSearch = async()=>{
-    if (!searchInput.value) return
+    if (!searchInput.value) return;
     searchInput.blur();
     try {
         const recipiesdata = 
@@ -13,6 +15,16 @@ const foodItemSearch = async()=>{
         recipeList.innerHTML = "";
         const recipes = recipiesdata.data.recipes;
 
+        if(recipes.length === 0){
+          emoji.className = "fa-solid fa-circle-exclamation"
+          instruction.innerText = "No recipes found. Try another keyword."
+
+          recipeDetailContent.classList.add("hidden")
+          recipeDetailPanel.classList.remove("has-recipe")
+          return;
+        }
+          emoji.className = "fa-regular fa-face-smile"
+          instruction.innerText = "Recipes found. Click any item to view details."
         recipes.forEach(recipe => {
             let recipeItem = document.createElement("div")
             recipeItem.className = "recipe-item"
@@ -36,7 +48,7 @@ const foodItemSearch = async()=>{
 function formatIngredient(ing) {
     if (!ing) return ""
     const parts = [ing.quantity, ing.unit, ing.description].filter(Boolean)
-    console.log(parts.join(" ").trim() || (ing.description || ""))
+    // console.log(parts.join(" ").trim() || (ing.description || ""))
     return parts.join(" ").trim() || (ing.description || "")
   }
   
